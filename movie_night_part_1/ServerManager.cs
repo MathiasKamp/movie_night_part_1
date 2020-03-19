@@ -9,9 +9,10 @@ namespace movie_night_part_1
 {
     public static class ServerManager
     {
-        private static string cs = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MoviesDB;Integrated Security=True";
+        // database connection string
+        private static string cs = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MoviesDB_1;Integrated Security=True";
 
-
+        // get movie method
         public static List<Movie> GetMovies()
         {
             List<Movie> movies = new List<Movie>();
@@ -39,7 +40,7 @@ namespace movie_night_part_1
             }
             return movies;
         }
-
+        // get actors method
         public static List<Actor> getActors()
         {
             List<Actor> actors = new List<Actor>();
@@ -67,7 +68,7 @@ namespace movie_night_part_1
             }
             return actors;
         }
-
+        // get movieswithsearch method
         public static List<Movie> GetMoviesWithSearch(string search)
         {
             List<Movie> movies = new List<Movie>();
@@ -101,6 +102,7 @@ namespace movie_night_part_1
             }
             return movies;
         }
+        // get actorswithsearch method
 
         public static List<Actor> getActorsWithSearch(string search_actname)
         {
@@ -135,6 +137,7 @@ namespace movie_night_part_1
             return actors;
         }
 
+        // getmovieswithgenreromance method
         public static List<Movie> GetMoviesWithGenreRomance()
         {
             List<Movie> movies = new List<Movie>();
